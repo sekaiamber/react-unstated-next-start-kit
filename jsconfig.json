@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+      "baseUrl": "./",
+      "paths": {
+          "@antd": ["./src/antd/"],
+          "@common/*": ["./src/components/common/*"],
+          "@assets/*": ["./src/assets/*"]
+      }
+  },
+  "exclude": ["node_modules", "dist"]
+}

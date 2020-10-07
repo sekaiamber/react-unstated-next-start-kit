@@ -1,0 +1,114 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 16px;
+  display: block;
+  background-color: #fff;
+  z-index: 100;
+  height: auto;
+  transition: all ease 0.15s;
+
+  &.not-top {
+    box-shadow: 0 0 8px 0 rgba($color: #000000, $alpha: 0.3);
+  }
+
+  &.show-menu {
+    box-shadow: 0 0 8px 0 rgba($color: #000000, $alpha: 0.3);
+  }
+
+  .logo {
+    height: 30px;
+  }
+
+  .menu-left,
+  .menu-right {
+    display: none;
+    font-size: 14px;
+
+    a {
+      display: block;
+      margin-right: 0;
+      padding: 10px;
+    }
+  }
+
+  &.show-menu {
+    .menu-left {
+      display: block;
+    }
+    .menu-right {
+      display: flex;
+    }
+  }
+
+  .menu-right {
+    position: relative;
+    padding-top: 140px;
+
+    .menu-right-link {
+      width: 50%;
+      text-align: center;
+      padding: 6px;
+
+      &:first-child {
+        margin-right: 24px;
+      }
+    }
+
+    .menu-lang {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px;
+      display: block;
+      width: 100%;
+
+      ion-icon[name="chevron-down-outline"] {
+        display: none;
+      }
+
+      &:hover {
+        background: none;
+      }
+
+      .item {
+        padding-bottom: 10px;
+        display: inline-block;
+
+        &>span {
+          display: none;
+        }
+        .m-show {
+          display: inline-block;
+        }
+      }
+
+      ul {
+        display: block;
+        background: none;
+        position: static;
+        padding-bottom: 0;
+
+        li {
+          padding: 10px;
+          text-align: left;
+          padding-left: 25px;
+
+          a {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .m-btn {
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    transform: translate(0, -50%);
+  }
+}
